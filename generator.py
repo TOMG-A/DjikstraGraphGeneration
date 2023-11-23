@@ -23,4 +23,4 @@ def GenerateGraph(n:int,P:float,maxWeight:int) -> Graph:
                 weight=random.randrange(1,maxWeight)
                 print(f"Create Edge Between {x} and {y} with weight {weight}")
                 x.add_child(y,weight)
-    return graph,(time.process_time()-start_time),start_time
+    return graph,(time.process_time()),start_time
