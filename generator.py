@@ -11,7 +11,7 @@ def getReachableNode(g:Graph) -> Node:
 
 def GenerateGraph(n:int,P:float,maxWeight:int) -> Graph:
     
-    start_time=time.time()
+    start_time=time.time_ns()
     ## Clamps probability value between 0->1
     P=max(0,min(P,1))
 
@@ -26,4 +26,4 @@ def GenerateGraph(n:int,P:float,maxWeight:int) -> Graph:
                 weight=random.randint(1,maxWeight)
                 # print(f"Create Edge Between {x} and {y} with weight {weight}")
                 x.append(y,weight)
-    return graph,(time.time()),start_time
+    return graph,(time.time_ns()),start_time

@@ -13,8 +13,9 @@ print(f"Graph Generation Runtime: {end-start} ms")
 print(f"Djikstra's Algorithm Runtime: {overall_time-end} ms")
 print(f"Total Runtime: {overall_time-start} ms")
 
-print(end-start)
-print(end)
+print(start)
+print(overall_time)
+print(overall_time-end)
 #### EDGELIST CONVERSION ---- TEST ####
 convert={}
 for a,x in enumerate(graph):
