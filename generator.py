@@ -3,6 +3,12 @@ import random
 import math
 import time
 
+def getReachableNode(g:Graph) -> Node:
+    chosen=g[random.randint(0,len(g)-1)]
+    if chosen.children == []:
+        return getReachableNode(g)
+    return chosen
+
 def GenerateGraph(n:int,P:float,maxWeight:int) -> Graph:
     
     start_time=time.time()
