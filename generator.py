@@ -1,4 +1,4 @@
-from djikstra.node import *
+from djikstra import *
 import random
 import math
 import timeit

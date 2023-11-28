@@ -14,7 +14,7 @@ print(f"Graph Generation Runtime: {round(end-start,3)*100} ms")
 print(f"Djikstra's Algorithm Runtime: {round(overall_time-end,3)*100} ms")
 print(f"Total Runtime: {round(overall_time-start,3)*100} ms")
 for x in a:
-    print(f"Distance to {x} --> {a[x]}")
+    print(f"Distance to {x} from {startPoint} --> {a[x]}")
 
 
 
