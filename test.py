@@ -1,8 +1,5 @@
 import djikstra
 import generator
-import networkx as NX
-import random
-import time
 
 #### Generally 2/N returns a reasonable amount of edges,
 #### With minimal amount of unreachable nodes

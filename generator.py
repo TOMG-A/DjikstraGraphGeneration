@@ -1,7 +1,7 @@
 from djikstra.node import *
 import random
 import math
-import time
+import timeit
 
 def getReachableNode(g:Graph) -> Node:
     chosen=g[random.randint(0,len(g)-1)]
@@ -11,7 +11,7 @@ def getReachableNode(g:Graph) -> Node:
 
 def GenerateGraph(n:int,P:float,maxWeight:int) -> Graph:
     
-    start_time=time.time()
+    start_time=timeit.default_timer()
     ## Clamps probability value between 0->1
     P=max(0,min(P,1))
 
@@ -26,4 +26,4 @@ def GenerateGraph(n:int,P:float,maxWeight:int) -> Graph:
                 weight=random.randint(1,maxWeight)
                 # print(f"Create Edge Between {x} and {y} with weight {weight}")
                 x.append(y,weight)
-    return graph,(time.time()),start_time
+    return graph,(timeit.default_timer()),start_time
