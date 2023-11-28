@@ -2,20 +2,24 @@ import djikstra
 import generator
 import networkx as NX
 import random
+import time
 
-
-graph,end,start=generator.GenerateGraph(10,2/10,20)
+#### Generally 2/N returns a reasonable amount of edges,
+#### With minimal amount of unreachable nodes
+n=int(input("Enter quantity of nodes:\n"))
+graph,end,start=generator.GenerateGraph(n,2/n,20)
 startPoint=generator.getReachableNode(graph)
 a,b,overall_time=djikstra.Dijkstra(graph,startPoint)
-print(a)
+print(f"STARTING NODE: {startPoint}")
+print(f"Graph Generation Runtime: {round(end-start,3)*100} ms")
+print(f"Djikstra's Algorithm Runtime: {round(overall_time-end,3)*100} ms")
+print(f"Total Runtime: {round(overall_time-start,3)*100} ms")
+for x in a:
+    print(f"Distance to {x} --> {a[x]}")
 
-print(f"Graph Generation Runtime: {end-start} ms")
-print(f"Djikstra's Algorithm Runtime: {overall_time-end} ms")
-print(f"Total Runtime: {overall_time-start} ms")
 
-print(start)
-print(overall_time)
-print(overall_time-end)
+
+
 #### EDGELIST CONVERSION ---- TEST ####
 convert={}
 for a,x in enumerate(graph):
@@ -23,9 +27,11 @@ for a,x in enumerate(graph):
     for y in x.children:
         convert[a].append(graph._Vertices.index(y[0]))
 # G=NX.from_dict_of_lists(convert)
+
 #### TO STRING FOR ONLINE GRAPH GENERATOR ####
 new=""
 for a,x in enumerate(graph):
     for y in x.children:
         new=new+f"\n{x} {y[0]} {y[1]}"
-# print(new)
+if input()=="test":
+    print(new)
