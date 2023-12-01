@@ -1,5 +1,5 @@
 # Djikstra Graph Generation
-For it to work
+### Quick Start
 ```console
 git clone https://github.com/TOMG-A/DjikstraGraphGeneration
 cd DjikstraGraphGeneration
