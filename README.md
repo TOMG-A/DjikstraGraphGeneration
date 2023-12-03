@@ -7,4 +7,5 @@ cd DjikstraGraphGeneration
 ```console
 git clone https://github.com/TOMG-A/DjikstrasAlgorithm
 ren "DjikstrasAlgorithm" "djikstra"
+py test.py
 ```
