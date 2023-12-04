@@ -1,11 +1,8 @@
 # Djikstra Graph Generation
 ### Quick Start
 ```console
+pip install -i https://test.pypi.org/simple/ dijkstras-algorithm-TOMG-A
 git clone https://github.com/TOMG-A/DjikstraGraphGeneration
 cd DjikstraGraphGeneration
-```
-```console
-git clone https://github.com/TOMG-A/DjikstrasAlgorithm
-ren "DjikstrasAlgorithm" "djikstra"
 py test.py
 ```
