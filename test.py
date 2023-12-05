@@ -1,4 +1,4 @@
-import djikstra
+import dijkstra
 import generator
 
 #### Generally 2/N returns a reasonable amount of edges,
@@ -7,11 +7,11 @@ n=int(input("Enter quantity of nodes:\n"))
 
 graph,end,start=generator.GenerateGraph(n,2/n,20)
 startPoint=generator.getReachableNode(graph)
-a,b,overall_time=djikstra.Dijkstra(graph,startPoint)
+a,b,overall_time=dijkstra.Dijkstra(graph,startPoint)
 
 print(f"STARTING NODE: {startPoint}")
 print(f"Graph Generation Runtime: {round(end-start,3)*100} ms")
-print(f"Djikstra's Algorithm Runtime: {round(overall_time-end,3)*100} ms")
+print(f"dijkstra's Algorithm Runtime: {round(overall_time-end,3)*100} ms")
 print(f"Total Runtime: {round(overall_time-start,3)*100} ms")
 for x in a:
     print(f"Distance to {x} from {startPoint} --> {a[x]}")
