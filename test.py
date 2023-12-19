@@ -5,7 +5,7 @@ import generator
 #### With minimal amount of unreachable nodes
 n=int(input("Enter quantity of nodes:\n"))
 
-graph,end,start=generator.GenerateGraph(n,5/n,20)
+graph,end,start=generator.GenerateGraph(n,3/n,20)
 startPoint=generator.getReachableNode(graph)
 a,b,overall_time=dijkstra.Dijkstra(graph,startPoint)
 print(f"STARTING NODE: {startPoint}")
